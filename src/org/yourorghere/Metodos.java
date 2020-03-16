@@ -81,7 +81,7 @@ public class Metodos
             float TOP_SOMBREROG, float HEIGHT_SOMBREROG,
             float RADIO_SOMBREROP, float TOP_SOMBREROP, float HEIGHT_SOMBREROP)
     {
-        //Cilindro grande
+        //Cilindro largo
         c.set_black_material(gl);
         gl.glPushMatrix();
         gl.glTranslatef(0.0f, 1.45f, 0f);
@@ -89,7 +89,7 @@ public class Metodos
         glu.gluCylinder(q, RADIO_SOMBREROG, TOP_SOMBREROG, HEIGHT_SOMBREROG, 
                 SLICES, STACKS);
         glu.gluDisk(q, 0f, DISK_SOMBREROG, SLICES, STACKS);
-        //Cilindro pequeno
+        //Cilindro corto
         gl.glPopMatrix();
         c.set_black_material(gl);
         gl.glPushMatrix();

@@ -36,10 +36,10 @@ public class DibujaSnowMan
     private static final float HEIGHT_SOMBREROG = 0.58f;
     private static final float DISK_SOMBREROG = 0.35f;
 
-    private static final float RADIO_SOMBREROP = 0.55f;
-    private static final float TOP_SOMBREROP = 0.55f;
+    private static final float RADIO_SOMBREROP = 0.65f;
+    private static final float TOP_SOMBREROP = 0.65f;
     private static final float HEIGHT_SOMBREROP = 0.15f;
-    private static final float DISK_SOMBREROP = 0.55f;
+    private static final float DISK_SOMBREROP = 0.65f;
 
     private static final float DISK_BOTON = 0.05f;
 
