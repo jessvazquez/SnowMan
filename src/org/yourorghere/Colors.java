@@ -13,8 +13,30 @@ import javax.media.opengl.GL;
  */
 public class Colors
 {
-    
-     public void set_orange_material(GL gl)
+
+    public void set_pink_material(GL gl)
+    {
+        float[] mat_ambient =
+        {
+            1.0f, 0.24f, 1.0f, 1.0f
+        };
+        float[] mat_diffuse =
+        {
+            0.427451f, 0.470588f, 0.541176f, 1.0f
+        };
+        float[] mat_specular =
+        {
+            0.333333f, 0.333333f, 0.521569f, 1.0f
+        };
+        float shine = 9.84615f;
+
+        gl.glMaterialfv(GL.GL_FRONT_AND_BACK, GL.GL_AMBIENT, mat_ambient, 0);
+        gl.glMaterialfv(GL.GL_FRONT_AND_BACK, GL.GL_DIFFUSE, mat_diffuse, 0);
+        gl.glMaterialfv(GL.GL_FRONT_AND_BACK, GL.GL_SPECULAR, mat_specular, 0);
+        gl.glMaterialf(GL.GL_FRONT_AND_BACK, GL.GL_SHININESS, shine);
+    }
+
+    public void set_orange_material(GL gl)
     {
         float mat_ambient[] =
         {
@@ -247,5 +269,5 @@ public class Colors
         gl.glMaterialf(GL.GL_FRONT_AND_BACK, GL.GL_SHININESS, shine);
 
     }
-    
+
 }
