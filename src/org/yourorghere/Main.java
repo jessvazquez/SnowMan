@@ -155,7 +155,7 @@ public class Main extends JFrame implements GLEventListener,
 //        {
 //            ex.printStackTrace();
 //        }
-        reproducir(boss);
+      //  reproducir(boss);
 
         gl.glShadeModel(GL.GL_SMOOTH);
         drawable.addMouseListener(this);
