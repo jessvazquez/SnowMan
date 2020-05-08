@@ -5,6 +5,7 @@
  */
 package org.yourorghere;
 
+import com.sun.opengl.util.Animator;
 import javafx.concurrent.Task;
 
 /**
@@ -17,29 +18,44 @@ public class CargaEscenario extends javax.swing.JFrame
     int personaje;
     int nivel;
     static int i;
-    Jugar j;
+    private final Animator per;
 
     /**
      * Creates new form CargaEscenario
+     *
+     * @param personaje
+     * @param nivel
      */
     public CargaEscenario(int personaje, int nivel)
     {
         initComponents();
         this.personaje = personaje;
+        switch (personaje)
+        {
+            case 1:
+                SnowMan sm = new SnowMan(personaje, nivel);
+                gLCanvas2.addGLEventListener(sm);
+                break;
+            case 2:
+                SnowGirl sg = new SnowGirl(personaje, nivel);
+                gLCanvas2.addGLEventListener(sg);
+                break;
+            case 3:
+                MCowboy mc = new MCowboy(personaje, nivel);
+                gLCanvas2.addGLEventListener(mc);
+                break;
+        }
+
+        per = new Animator(gLCanvas2);
+        per.start();
+
+        setVisible(true);
+        setSize(960, 550);
+        //Generamos al centro de la pantalla con null
+        setLocationRelativeTo(null);
         System.out.println("Cargando...");
         System.out.println("Personaje seleccionado: " + personaje);
         System.out.println("Nivel seleccionado: " + nivel);
-      //  j = new Jugar(personaje, nivel);
-
-        setSize(830, 500);
-        //Generamos al centro de la pantalla con null
-        setLocationRelativeTo(null);
-
-    }
-
-    public CargaEscenario()
-    {
-
     }
 
     /**
@@ -53,21 +69,10 @@ public class CargaEscenario extends javax.swing.JFrame
     {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        jPanel1 = new javax.swing.JPanel();
+        gLCanvas2 = new javax.media.opengl.GLCanvas();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(960, 550));
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 806, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 452, Short.MAX_VALUE)
-        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -75,14 +80,15 @@ public class CargaEscenario extends javax.swing.JFrame
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(gLCanvas2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 6, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(gLCanvas2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -123,6 +129,13 @@ public class CargaEscenario extends javax.swing.JFrame
             java.util.logging.Logger.getLogger(CargaEscenario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable()
@@ -159,11 +172,10 @@ public class CargaEscenario extends javax.swing.JFrame
 //        {
 //            System.out.println("Error: " + e);
 //        }
-
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JPanel jPanel1;
+    private javax.media.opengl.GLCanvas gLCanvas2;
     // End of variables declaration//GEN-END:variables
 }

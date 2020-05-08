@@ -16,7 +16,7 @@ public class SelecPersonajes extends javax.swing.JFrame
     /**
      * Creates new form SelecPersonajes
      */
-  //  Main sm = new Main();
+    //  Main sm = new Main();
     public SelecPersonajes()
     {
         initComponents();

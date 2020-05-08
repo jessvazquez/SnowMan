@@ -126,7 +126,7 @@ public class Niveles extends javax.swing.JFrame
     private void nivel2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_nivel2ActionPerformed
     {//GEN-HEADEREND:event_nivel2ActionPerformed
         // TODO add your handling code here:
-        CargaEscenario1 c = new CargaEscenario1(personaje, 2);
+        CargaEscenario c = new CargaEscenario(personaje, 2);
         System.out.println("Nivel 2 seleccionado");
         c.setVisible(rootPaneCheckingEnabled);
         this.dispose();
@@ -136,9 +136,9 @@ public class Niveles extends javax.swing.JFrame
     {//GEN-HEADEREND:event_nivel1ActionPerformed
         // TODO add your handling code here:
         // CargaEscenario c = new CargaEscenario(personaje, 1);
-       CargaEscenario1 c = new CargaEscenario1(personaje, 1);
+        CargaEscenario c = new CargaEscenario(personaje, 1);
         System.out.println("Nivel 1 seleccionado");
-       c.setVisible(rootPaneCheckingEnabled);
+        c.setVisible(rootPaneCheckingEnabled);
         this.dispose();
     }//GEN-LAST:event_nivel1ActionPerformed
 
@@ -146,7 +146,7 @@ public class Niveles extends javax.swing.JFrame
     {//GEN-HEADEREND:event_nivel3ActionPerformed
         // TODO add your handling code here:
         System.out.println("Nivel 3 seleccionado");
-        CargaEscenario1 c = new CargaEscenario1(personaje, 3);
+        CargaEscenario c = new CargaEscenario(personaje, 3);
         c.setVisible(rootPaneCheckingEnabled);
         this.dispose();
     }//GEN-LAST:event_nivel3ActionPerformed

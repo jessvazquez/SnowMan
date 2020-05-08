@@ -5,8 +5,6 @@
  */
 package org.yourorghere;
 
-import com.sun.opengl.util.texture.Texture;
-import java.io.File;
 import javax.swing.JOptionPane;
 
 /**
