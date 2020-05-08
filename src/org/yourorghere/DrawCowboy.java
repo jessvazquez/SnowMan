@@ -1,4 +1,4 @@
-package Personaje.Cowboy;
+package org.yourorghere;
 import com.sun.opengl.util.texture.Texture;
 import javax.media.opengl.GL;
 import javax.media.opengl.glu.GLU;

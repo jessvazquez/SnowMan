@@ -73,8 +73,22 @@ public class Main extends JFrame implements GLEventListener,
     String coinhit = "src/sonidos/coinhit.wav";
     String select = "src/sonidos/select.wav";
 
-    public static ImageIcon imagen = new ImageIcon("src/fondos/paisaje.jpg");
-    Texture t;
+//    public static ImageIcon imagen = new ImageIcon("src/fondos/paisaje.jpg");
+//    Texture t;
+    int p;
+    int n;
+
+    public Main(int p, int n)
+    {
+        setTitle("SnowMan's Adventure!");
+        setSize(960, 550);
+        //Generamos al centro de la pantalla con null
+        setLocationRelativeTo(null);
+        this.p = p;
+        this.n = n;
+        
+  
+    }
 
     public static void main(String[] args)
     {
@@ -84,7 +98,7 @@ public class Main extends JFrame implements GLEventListener,
                 + "'X' rotation Y");
         GLCanvas canvas = new GLCanvas();
 
-        canvas.addGLEventListener(new Main());
+        canvas.addGLEventListener(new Main(0, 0));
         frame.add(canvas);
         frame.setSize(720, 480);
         final Animator animator = new Animator(canvas);
@@ -116,6 +130,7 @@ public class Main extends JFrame implements GLEventListener,
 
     public void init(GLAutoDrawable drawable)
     {
+
         GL gl = drawable.getGL();
         System.err.println("INIT GL IS: " + gl.getClass().getName());
         gl.setSwapInterval(1);
@@ -155,8 +170,7 @@ public class Main extends JFrame implements GLEventListener,
 //        {
 //            ex.printStackTrace();
 //        }
-      //  reproducir(boss);
-
+        //  reproducir(boss);
         gl.glShadeModel(GL.GL_SMOOTH);
         drawable.addMouseListener(this);
         drawable.addMouseMotionListener(this);

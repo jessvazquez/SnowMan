@@ -17,11 +17,9 @@ public class SelecPersonajes extends javax.swing.JFrame
      * Creates new form SelecPersonajes
      */
   //  Main sm = new Main();
-
     public SelecPersonajes()
     {
         initComponents();
-
     }
 
     /**
@@ -147,7 +145,7 @@ public class SelecPersonajes extends javax.swing.JFrame
     private void snowManActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_snowManActionPerformed
     {//GEN-HEADEREND:event_snowManActionPerformed
         // TODO add your handling code here:
-       // DibujaSnowMan sm = new DibujaSnowMan();
+        // DibujaSnowMan sm = new DibujaSnowMan();
         Niveles n = new Niveles(1);
         n.setVisible(rootPaneCheckingEnabled);
         this.dispose();
@@ -156,7 +154,7 @@ public class SelecPersonajes extends javax.swing.JFrame
     private void snowGirlActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_snowGirlActionPerformed
     {//GEN-HEADEREND:event_snowGirlActionPerformed
         // TODO add your handling code here:
-     //   DibujaSnowGirl sg = new DibujaSnowGirl();
+        //   DibujaSnowGirl sg = new DibujaSnowGirl();
         Niveles n = new Niveles(2);
         n.setVisible(rootPaneCheckingEnabled);
         this.dispose();
