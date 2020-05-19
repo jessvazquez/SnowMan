@@ -204,7 +204,7 @@ public class SnowMan extends JFrame implements GLEventListener,
         gl.glMatrixMode(GL.GL_MODELVIEW);
 
         gl.glLoadIdentity();
-        glu.gluLookAt(0.1f, 0.0f, 4.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+       glu.gluLookAt(0.1f, 0.0f, 4.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
 
         DibujaSnowMan dsm = new DibujaSnowMan();
         //mueve la escena

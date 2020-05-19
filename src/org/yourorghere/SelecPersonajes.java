@@ -44,7 +44,7 @@ public class SelecPersonajes extends javax.swing.JFrame
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Selecciona personaje");
 
-        snowGirl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/seleccionPersonajes/snowgirl.png"))); // NOI18N
+        snowGirl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/snowgirl.png"))); // NOI18N
         snowGirl.setText("jButton1");
         snowGirl.addActionListener(new java.awt.event.ActionListener()
         {
@@ -54,7 +54,7 @@ public class SelecPersonajes extends javax.swing.JFrame
             }
         });
 
-        cowboy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/seleccionPersonajes/cowboy.png"))); // NOI18N
+        cowboy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cowboy.png"))); // NOI18N
         cowboy.setText("jButton1");
         cowboy.addActionListener(new java.awt.event.ActionListener()
         {
@@ -64,9 +64,8 @@ public class SelecPersonajes extends javax.swing.JFrame
             }
         });
 
-        snowMan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/seleccionPersonajes/snowman.png"))); // NOI18N
+        snowMan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/snowman.png"))); // NOI18N
         snowMan.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        snowMan.setLabel("");
         snowMan.setMaximumSize(new java.awt.Dimension(432, 337));
         snowMan.addActionListener(new java.awt.event.ActionListener()
         {

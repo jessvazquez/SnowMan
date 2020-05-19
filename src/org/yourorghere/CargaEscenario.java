@@ -7,6 +7,7 @@ package org.yourorghere;
 
 import com.sun.opengl.util.Animator;
 import javafx.concurrent.Task;
+import sun.misc.Cleaner;
 
 /**
  *
@@ -19,6 +20,7 @@ public class CargaEscenario extends javax.swing.JFrame
     int nivel;
     static int i;
     private final Animator per;
+//    private final Animator niv;
 
     /**
      * Creates new form CargaEscenario
@@ -30,6 +32,7 @@ public class CargaEscenario extends javax.swing.JFrame
     {
         initComponents();
         this.personaje = personaje;
+        this.nivel = nivel;
         switch (personaje)
         {
             case 1:
@@ -45,8 +48,19 @@ public class CargaEscenario extends javax.swing.JFrame
                 gLCanvas2.addGLEventListener(mc);
                 break;
         }
+//        switch (nivel)
+//        {
+//            case 1:
+//                GLRenderer glr = new GLRenderer();
+//                glr.main();
+//                
+//                //gLCanvas2.addGLEventListener(glr);
+//                break;
+//        }
 
         per = new Animator(gLCanvas2);
+//        niv = new Animator(gLCanvas2);
+//        niv.start();
         per.start();
 
         setVisible(true);

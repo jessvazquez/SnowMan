@@ -27,14 +27,14 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
               <Component id="nivel1" min="-2" pref="139" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
               <Component id="nivel2" min="-2" pref="139" max="-2" attributes="0"/>
-              <EmptySpace pref="129" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Component id="nivel3" min="-2" pref="139" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="215" max="32767" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="201" max="-2" attributes="0"/>
           </Group>
@@ -46,10 +46,12 @@
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="nivel2" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
-                  <Component id="nivel3" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
-                  <Component id="nivel1" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="nivel2" alignment="0" min="-2" pref="125" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="nivel3" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
+                      <Component id="nivel1" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace pref="131" max="32767" attributes="0"/>
           </Group>
@@ -68,8 +70,9 @@
     <Component class="javax.swing.JButton" name="nivel2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/niveles/paisaje2.jpg"/>
+          <Image iconType="3" name="/imagenes/textura3.jpg"/>
         </Property>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nivel2ActionPerformed"/>
@@ -78,8 +81,9 @@
     <Component class="javax.swing.JButton" name="nivel3">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/niveles/paisaje3.jpg"/>
+          <Image iconType="3" name="/imagenes/textura3.jpg"/>
         </Property>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nivel3ActionPerformed"/>
@@ -88,7 +92,7 @@
     <Component class="javax.swing.JButton" name="nivel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/niveles/paisaje1.jpg"/>
+          <Image iconType="3" name="/imagenes/nivel1.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>

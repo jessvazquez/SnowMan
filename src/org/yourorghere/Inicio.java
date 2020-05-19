@@ -121,7 +121,9 @@ public class Inicio extends javax.swing.JFrame
     {//GEN-HEADEREND:event_jButton1ActionPerformed
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(rootPane,
-                "Para jugar presionas las flechas arriba y abajo",
+                "'W' avanza, 'A' Girar a la izq. 'S' Retroceder"
+                + ", 'D' Girar a la derecha, 'O' Primera persona\n\t"
+                + "'O' Primera persona, 'P' Vista aerea.",
                 "Como jugar", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jButton1ActionPerformed
 

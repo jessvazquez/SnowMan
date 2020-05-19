@@ -61,7 +61,8 @@ public class Niveles extends javax.swing.JFrame
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 40)); // NOI18N
         jLabel1.setText("Selecciona un nivel");
 
-        nivel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/niveles/paisaje2.jpg"))); // NOI18N
+        nivel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/textura3.jpg"))); // NOI18N
+        nivel2.setEnabled(false);
         nivel2.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
@@ -70,7 +71,8 @@ public class Niveles extends javax.swing.JFrame
             }
         });
 
-        nivel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/niveles/paisaje3.jpg"))); // NOI18N
+        nivel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/textura3.jpg"))); // NOI18N
+        nivel3.setEnabled(false);
         nivel3.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
@@ -79,7 +81,7 @@ public class Niveles extends javax.swing.JFrame
             }
         });
 
-        nivel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/niveles/paisaje1.jpg"))); // NOI18N
+        nivel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/nivel1.png"))); // NOI18N
         nivel1.setToolTipText("");
         nivel1.addActionListener(new java.awt.event.ActionListener()
         {
@@ -96,13 +98,13 @@ public class Niveles extends javax.swing.JFrame
             .addGroup(layout.createSequentialGroup()
                 .addGap(55, 55, 55)
                 .addComponent(nivel1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(118, 118, 118)
+                .addGap(124, 124, 124)
                 .addComponent(nivel2, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(nivel3, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(59, 59, 59))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(215, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(201, 201, 201))
         );
@@ -112,10 +114,11 @@ public class Niveles extends javax.swing.JFrame
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
                 .addGap(65, 65, 65)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(nivel2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nivel3, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nivel1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(nivel3, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(nivel1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(131, Short.MAX_VALUE))
         );
 
@@ -135,10 +138,12 @@ public class Niveles extends javax.swing.JFrame
     private void nivel1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_nivel1ActionPerformed
     {//GEN-HEADEREND:event_nivel1ActionPerformed
         // TODO add your handling code here:
-        // CargaEscenario c = new CargaEscenario(personaje, 1);
-        CargaEscenario c = new CargaEscenario(personaje, 1);
+        //CargaEscenario c = new CargaEscenario(personaje, 1);
+        //   CargaEscenario c = new CargaEscenario(personaje, 1);
         System.out.println("Nivel 1 seleccionado");
-        c.setVisible(rootPaneCheckingEnabled);
+        GLRenderer glr = new GLRenderer();
+        glr.main();
+//        c.setVisible(rootPaneCheckingEnabled);
         this.dispose();
     }//GEN-LAST:event_nivel1ActionPerformed
 

@@ -82,7 +82,7 @@
     <Component class="javax.swing.JButton" name="snowGirl">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/seleccionPersonajes/snowgirl.png"/>
+          <Image iconType="3" name="/imagenes/snowgirl.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jButton1"/>
       </Properties>
@@ -93,7 +93,7 @@
     <Component class="javax.swing.JButton" name="cowboy">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/seleccionPersonajes/cowboy.png"/>
+          <Image iconType="3" name="/imagenes/cowboy.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jButton1"/>
       </Properties>
@@ -104,7 +104,7 @@
     <Component class="javax.swing.JButton" name="snowMan">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/seleccionPersonajes/snowman.png"/>
+          <Image iconType="3" name="/imagenes/snowman.png"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="0"/>
         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
