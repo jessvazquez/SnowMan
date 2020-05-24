@@ -62,7 +62,6 @@ public class Niveles extends javax.swing.JFrame
         jLabel1.setText("Selecciona un nivel");
 
         nivel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/textura3.jpg"))); // NOI18N
-        nivel2.setEnabled(false);
         nivel2.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
@@ -129,9 +128,11 @@ public class Niveles extends javax.swing.JFrame
     private void nivel2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_nivel2ActionPerformed
     {//GEN-HEADEREND:event_nivel2ActionPerformed
         // TODO add your handling code here:
-        CargaEscenario c = new CargaEscenario(personaje, 2);
+        //CargaEscenario c = new CargaEscenario(personaje, 2);
         System.out.println("Nivel 2 seleccionado");
-        c.setVisible(rootPaneCheckingEnabled);
+        GLRenderer glr = new GLRenderer();
+        glr.main(2);
+        //c.setVisible(rootPaneCheckingEnabled);
         this.dispose();
     }//GEN-LAST:event_nivel2ActionPerformed
 
@@ -142,7 +143,7 @@ public class Niveles extends javax.swing.JFrame
         //   CargaEscenario c = new CargaEscenario(personaje, 1);
         System.out.println("Nivel 1 seleccionado");
         GLRenderer glr = new GLRenderer();
-        glr.main();
+        glr.main(1);
 //        c.setVisible(rootPaneCheckingEnabled);
         this.dispose();
     }//GEN-LAST:event_nivel1ActionPerformed
@@ -151,8 +152,10 @@ public class Niveles extends javax.swing.JFrame
     {//GEN-HEADEREND:event_nivel3ActionPerformed
         // TODO add your handling code here:
         System.out.println("Nivel 3 seleccionado");
-        CargaEscenario c = new CargaEscenario(personaje, 3);
-        c.setVisible(rootPaneCheckingEnabled);
+        GLRenderer glr = new GLRenderer();
+        glr.main(3);
+        // CargaEscenario c = new CargaEscenario(personaje, 3);
+        //c.setVisible(rootPaneCheckingEnabled);
         this.dispose();
     }//GEN-LAST:event_nivel3ActionPerformed
 

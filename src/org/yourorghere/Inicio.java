@@ -125,6 +125,7 @@ public class Inicio extends javax.swing.JFrame
                 + ", 'D' Girar a la derecha, 'O' Primera persona\n\t"
                 + "'O' Primera persona, 'P' Vista aerea.",
                 "Como jugar", JOptionPane.INFORMATION_MESSAGE);
+       
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

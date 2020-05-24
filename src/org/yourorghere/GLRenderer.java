@@ -32,8 +32,11 @@ public class GLRenderer implements GLEventListener
     public static int option; //opcion de camara para poder entrar al laberinto
 //    public static Camera cam;
 
-    public void main()
+    static int nivel = 2;
+
+    public void main(int nivel)
     {
+        GLRenderer.nivel = nivel;
 
         Frame ventana = new Frame("'W' avanza, 'A' Girar a la izq. 'S' Retroceder"
                 + ", 'D' Girar a la derecha, 'O' Primera persona,'P' Vista aerea."); //Metodo clase Frame
@@ -84,8 +87,22 @@ public class GLRenderer implements GLEventListener
         gl.glShadeModel(GL.GL_SMOOTH); // try setting this to GL_FLAT and see what happens.
         gl.glEnable(gl.GL_DEPTH_TEST);//Generamos test de profundidad.
 
-        l = new Laberinto(gl, 0.0f, 0.0f, 0f, 1f, 1f, 1, 1f, 1f, 1f);//Generamos nuevo laberinto.
         jugador = new Gamer(gl, 0, 0.4f, 2f, 0.03f, 0.01f, 0.01f, 1f, 1f, 1f);
+        switch (nivel)
+        {
+            case 1:
+                System.out.println("Nivel 1");
+                l = new Laberinto(gl, 0.0f, 0.0f, 0f, 1f, 1f, 1, 1f, 1f, 1f, 1);//Generamos primer laberinto.
+                break;
+            case 2:
+                System.out.println("Nivel 2");
+                l = new Laberinto(gl, 0.0f, 0.0f, 0f, 1f, 1f, 1, 1f, 1f, 1f, 2);//Generamos segundo laberinto.
+                break;
+            case 3:
+                System.out.println("Nivel 3");
+                l = new Laberinto(gl, 0.0f, 0.0f, 0f, 1f, 1f, 1, 1f, 1f, 1f, 3);//Generamos tercer laberinto.
+                break;
+        }
         cx = 1f;
         cx = 1f;
         cy = 10f;

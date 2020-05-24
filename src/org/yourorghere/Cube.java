@@ -44,13 +44,6 @@ public class Cube
         this.cara = cara;
     }
 
-
-
-//    Cube(GL gl, float x, float y, float z, float f, float f0, float f1, int i, float f2, float f3, float f4)
-//    {
-//        
-//    }
-
     public void drawCube(float a)
     {
         gl.glPushMatrix();
