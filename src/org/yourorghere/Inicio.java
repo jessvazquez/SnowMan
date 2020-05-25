@@ -122,7 +122,7 @@ public class Inicio extends javax.swing.JFrame
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(rootPane,
                 "'W' avanza, 'A' Girar a la izq. 'S' Retroceder"
-                + ", 'D' Girar a la derecha, 'O' Primera persona\n\t"
+                + ", 'D' Girar a la derec ha, 'O' Primera persona\n\t"
                 + "'O' Primera persona, 'P' Vista aerea.",
                 "Como jugar", JOptionPane.INFORMATION_MESSAGE);
        

@@ -15,8 +15,7 @@ import javax.media.opengl.GL;
  *
  * @author deivi
  */
-public class Laberinto
-{
+public class Laberinto {
 
     private GL gl;
     public float x;
@@ -42,8 +41,7 @@ public class Laberinto
 
     public static int nivel = 0;
 
-    public Laberinto(GL gl, float x, float y, float z, float w, float h, float d, float r, float g, float b, int nivel)
-    {
+    public Laberinto(GL gl, float x, float y, float z, float w, float h, float d, float r, float g, float b, int nivel) {
         this.x = x;
         this.y = y;
         this.z = z;
@@ -55,17 +53,14 @@ public class Laberinto
         this.b = b;
         this.nivel = nivel;
 
-        switch (nivel)
-        {
+        switch (nivel) {
             case 1:
-                try
-                {
+                try {
                     floor = TextureIO.newTexture(new File("src/imagenes/textura2.jpg"), true);
                     cerramiento = TextureIO.newTexture(new File("src/imagenes/textura3.jpg"), true);
                     paredes = TextureIO.newTexture(new File("src/imagenes/textura.jpg"), true);
 
-                } catch (Exception e)
-                {
+                } catch (Exception e) {
                     System.out.println("Error con la textura we: " + e);
                     System.exit(1);
                 }
@@ -87,7 +82,7 @@ public class Laberinto
                 pz7 = new Cube(gl, x - 1.2f, y + h / 2, z - 1f, w * 0.6f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
 
                 //Paredes laterales parte inferior
-                p1z = new Cube(gl, x + 1.2f, y + h / 2, z + 1.5f, w + 0.5f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
+                p1z = new Cube(gl, x + 1.2f, y + h / 2.5f, z + 1.5f, w + 0.5f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
                 p2z = new Cube(gl, x + 1.5f, y + h / 2, z + 1f, w / 2f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
                 p3z = new Cube(gl, x + 0.75f, y + h / 2, z + 0.25f, w * 1.5f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
                 p4z = new Cube(gl, x + 1.6f, y + h / 2, z - 0.25f, w * 0.8f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
@@ -113,14 +108,12 @@ public class Laberinto
                 break;
 
             case 2:
-                try
-                {
+                try {
                     floor = TextureIO.newTexture(new File("src/imagenes/t1n2.jpg"), true);
                     cerramiento = TextureIO.newTexture(new File("src/imagenes/t2n2.jpg"), true);
                     paredes = TextureIO.newTexture(new File("src/imagenes/t3n2.jpg"), true);
 
-                } catch (Exception e)
-                {
+                } catch (Exception e) {
                     System.out.println("Error con la textura we: " + e);
                     System.exit(1);
                 }
@@ -133,36 +126,36 @@ public class Laberinto
                 p41 = new Cube(gl, x + 1.2f, y + h / 2, z + d * 2, w * 1.6f, h, d / 20, 1f, 1f, 1f, 1f, cerramiento);
 
                 //Paredes Laterales de la parte superior
-                pz1 = new Cube(gl, x - 1.3f, y + h / 2, z + 1.3f, w * 1.4f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
+                pz1 = new Cube(gl, x - 1.3f, y + h / 2, z + 0.7f, w * 1.4f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
                 pz2 = new Cube(gl, x - 1.3f, y + h / 2, z + 1f, w / 2, h, d / 20, 1f, 1f, 1f, 1f, paredes);
-                pz3 = new Cube(gl, x - 1.3f, y + h / 2, z + 0.5f, w * 0.6f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
-                pz4 = new Cube(gl, x - 1.1f, y + h / 2, z, w + 0.2f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
-                pz5 = new Cube(gl, x - 0.75f, y + h / 2, z - 0.5f, w + 0.5f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
+                pz3 = new Cube(gl, x - 1.3f, y + h / 2, z + 0.15f, w * 0.6f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
+                pz4 = new Cube(gl, x - 1.1f, y + h / 2, z - 0.75f, w + 0.9f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
+                pz5 = new Cube(gl, x - 0.75f, y + h / 2, z - 0.3f, w + 0.5f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
                 pz6 = new Cube(gl, x - 0.6f, y + h / 2, z - 0.8f, w * 0.6f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
                 pz7 = new Cube(gl, x - 1.2f, y + h / 2, z - 1f, w * 0.6f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
 
                 //Paredes laterales parte inferior
-                p1z = new Cube(gl, x + 1.2f, y + h / 2, z + 1.5f, w + 0.5f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
+                p1z = new Cube(gl, x + 1.2f, y + h / 2, z + 0.7f, w + 0.5f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
                 p2z = new Cube(gl, x + 1.5f, y + h / 2, z + 1f, w / 2f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
-                p3z = new Cube(gl, x + 0.75f, y + h / 2, z + 0.25f, w * 1.5f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
+                p3z = new Cube(gl, x + 0.65f, y + h / 2, z + 0.25f, w * 1.5f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
                 p4z = new Cube(gl, x + 1.6f, y + h / 2, z - 0.25f, w * 0.8f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
-                p5z = new Cube(gl, x + 0.5f, y + h / 2, z - 0.25f, w * 0.5f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
+                p5z = new Cube(gl, x + 0.63f, y + h / 2, z - 0.25f, w * 0.5f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
                 p6z = new Cube(gl, x + 0.5f, y + h / 2, z - 1f, w * 1.5f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
                 p7z = new Cube(gl, x + 0.2f, y + h / 2, z - 1.5f, w * 1.5f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
-                p8z = new Cube(gl, x + 1.5f, y + h / 2, z - 1.5f, w / 2f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
+                p8z = new Cube(gl, x + 1.2f, y + h / 2, z - 1.25f, w / 2f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
 
                 //Paredes horizontales parte superior
-                px1 = new Cube(gl, x - 0.6f, y + h / 2, z + 0.6f, w / 20, h, d * 1.2f, 1f, 1f, 1f, 1f, paredes);/////////////////////////??????????????????
-                px2 = new Cube(gl, x - 1.6f, y + h / 2, z + 0.4f, w / 20f, h, d * 1.2f, 1f, 1f, 1f, 1f, paredes);
-                px3 = new Cube(gl, x - 1.5f, y + h / 2, z + 0.8f, w / 20f, h, d * 0.6f, 1f, 1f, 1f, 1f, paredes);
-                px4 = new Cube(gl, x - 0.9f, y + h / 2, z - 1.4f, w / 20f, h, d + 0.2f, 1f, 1f, 1f, 1f, paredes);
-                px5 = new Cube(gl, x, y + h / 2, z + 0.5f, w / 20f, h, d * 1, 1f, 1f, 1f, 1f, paredes);
+                px1 = new Cube(gl, x - 1.2f, y + h / 2, z + 0.6f, w / 20, h, d * 1.2f, 1f, 1f, 1f, 1f, paredes);/////////////////////////??????????????????
+                px2 = new Cube(gl, x - 0.4f, y + h / 2, z + 0.6f, w / 20, h, d * 1.2f, 1f, 1f, 1f, 1f, paredes);
+                px3 = new Cube(gl, x - 0.1f, y + h / 2, z + 0.9f, w / 20, h, d * 1.2f, 1f, 1f, 1f, 1f, paredes);
+                px4 = new Cube(gl, x - 0.1f + 1.3f, y + h / 2, z + 0.6f, w / 20, h, d * 1.2f, 1f, 1f, 1f, 1f, paredes);
+                px5 = new Cube(gl, x - 0.05f + 1.3f, y + h / 2, z + 0.6f, w / 20, h, d * 1.2f, 1f, 1f, 1f, 1f, paredes);
 
                 //Paredes horizontales parte inferior
                 p1x = new Cube(gl, x + 0.75f, y + h / 2, z + 1.1f, w / 20, h, d * 1.1f, 1f, 1f, 1f, 1f, paredes);/////////////////////////??????????????????
-                p2x = new Cube(gl, x + 1.4f, y + h / 2, z + 0.8f, w / 20, h, d / 2, 1f, 1f, 1f, 1f, paredes);
+                p2x = new Cube(gl, x + 0.40f, y + h / 2, z + 1.1f, w / 20, h, d * 1.1f, 1f, 1f, 1f, 1f, paredes);
                 p3x = new Cube(gl, x + 0.3f, y + h / 2, z - 0.25f, w / 20, h, d / 2, 1f, 1f, 1f, 1f, paredes);
-                p4x = new Cube(gl, x + 1f, y + h / 2, z - 0.6f, w / 20, h, d, 1f, 1f, 1f, 1f, paredes);
+                p4x = new Cube(gl, x + 1.3f, y + h / 2, z - 1f, w / 20, h, d, 1f, 1f, 1f, 1f, paredes);
                 p5x = new Cube(gl, x - 0.1f, y + h / 2, z - 1.6f, w / 20, h, d * 0.8f, 1f, 1f, 1f, 1f, paredes);
                 p6x = new Cube(gl, x + 1.8f, y + h / 2, z - 1.6f, w / 20, h, d * 0.8f, 1f, 1f, 1f, 1f, paredes);
                 break;
@@ -207,36 +200,29 @@ public class Laberinto
 
     }
 
-    public void DrawFloor()
-    {
-        for (Cube v : paredesX)
-        {
+    public void DrawFloor() {
+        for (Cube v : paredesX) {
             v.DrawCube();
         }
-        for (Cube v : paredesZ)
-        {
+        for (Cube v : paredesZ) {
             v.DrawCube();
         }
         piso.DrawCube();
     }
 
-    public float getX()
-    {
+    public float getX() {
         return x;
     }
 
-    public float getY()
-    {
+    public float getY() {
         return y;
     }
 
-    public float getZ()
-    {
+    public float getZ() {
         return z;
     }
 
-    public float getW()
-    {
+    public float getW() {
         return w;
     }
 
