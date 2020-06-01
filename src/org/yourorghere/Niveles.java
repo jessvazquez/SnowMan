@@ -67,7 +67,7 @@ public class Niveles extends javax.swing.JFrame
             }
         });
 
-        nivel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/textura3.jpg"))); // NOI18N
+        nivel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/nivel3.png"))); // NOI18N
         nivel3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nivel3ActionPerformed(evt);
