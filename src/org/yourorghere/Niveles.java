@@ -47,8 +47,7 @@ public class Niveles extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
         nivel2 = new javax.swing.JButton();
@@ -61,31 +60,24 @@ public class Niveles extends javax.swing.JFrame
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 40)); // NOI18N
         jLabel1.setText("Selecciona un nivel");
 
-        nivel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/textura3.jpg"))); // NOI18N
-        nivel2.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        nivel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/nivel2.png"))); // NOI18N
+        nivel2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nivel2ActionPerformed(evt);
             }
         });
 
         nivel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/textura3.jpg"))); // NOI18N
-        nivel3.setEnabled(false);
-        nivel3.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        nivel3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nivel3ActionPerformed(evt);
             }
         });
 
         nivel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/nivel1.png"))); // NOI18N
         nivel1.setToolTipText("");
-        nivel1.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        nivel1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nivel1ActionPerformed(evt);
             }
         });
