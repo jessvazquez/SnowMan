@@ -108,7 +108,7 @@ public class Laberinto {
                 break;
 
             case 2:
-                try {
+                try { 
                     floor = TextureIO.newTexture(new File("src/imagenes/t1n2.jpg"), true);
                     cerramiento = TextureIO.newTexture(new File("src/imagenes/t2n2.jpg"), true);
                     paredes = TextureIO.newTexture(new File("src/imagenes/t3n2.jpg"), true);

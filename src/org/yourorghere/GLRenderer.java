@@ -12,6 +12,8 @@ import javax.media.opengl.GLAutoDrawable;
 import javax.media.opengl.GLCanvas;
 import javax.media.opengl.GLEventListener;
 import javax.media.opengl.glu.GLU;
+import javax.swing.JButton;
+import javax.swing.JPanel;
 
 /**
  * GLRenderer.java <BR>
@@ -20,8 +22,7 @@ import javax.media.opengl.glu.GLU;
  *
  * This version is equal to Brian Paul's version 1.2 1999/10/21
  */
-public class GLRenderer implements GLEventListener
-{
+public class GLRenderer implements GLEventListener {
 
     public static Laberinto l;
     public static Gamer jugador;
@@ -34,19 +35,21 @@ public class GLRenderer implements GLEventListener
 
     static int nivel = 2;
 
-    public void main(int nivel)
-    {
+    //Boton de menu y pausa.
+    static JPanel panel;
+    static JButton btnMenu;
+
+    public void main(int nivel) {
+
         GLRenderer.nivel = nivel;
 
         Frame ventana = new Frame("'W' avanza, 'A' Girar a la izq. 'S' Retroceder"
                 + ", 'D' Girar a la derecha, 'O' Primera persona,'P' Vista aerea."); //Metodo clase Frame
 
         ventana.setSize(1000, 700);//Tamano De La ventana
-        ventana.addWindowListener(new WindowAdapter()
-        { //Manejador de ventanas de abrir y cerrar
+        ventana.addWindowListener(new WindowAdapter() { //Manejador de ventanas de abrir y cerrar
 
-            public void WindowClosing(WindowEvent e)
-            {
+            public void WindowClosing(WindowEvent e) {
                 System.exit(0);
             }
         });
@@ -67,10 +70,13 @@ public class GLRenderer implements GLEventListener
         //Pulsacion de teclas 
         Keyboard keylistener = new Keyboard(canvas);
         canvas.addKeyListener(keylistener);
+        panel = new JPanel();
+        btnMenu = new JButton("Menu");
+        panel.add(btnMenu);
+
     }
 
-    public void init(GLAutoDrawable drawable)
-    {
+    public void init(GLAutoDrawable drawable) {
         // Use debug pipeline
         // drawable.setGL(new DebugGL(drawable.getGL()));
 
@@ -88,8 +94,7 @@ public class GLRenderer implements GLEventListener
         gl.glEnable(gl.GL_DEPTH_TEST);//Generamos test de profundidad.
 
         jugador = new Gamer(gl, 0, 0.4f, 2f, 0.03f, 0.01f, 0.01f, 1f, 1f, 1f);
-        switch (nivel)
-        {
+        switch (nivel) {
             case 1:
                 System.out.println("Nivel 1");
                 l = new Laberinto(gl, 0.0f, 0.0f, 0f, 1f, 1f, 1, 1f, 1f, 1f, 1);//Generamos primer laberinto.
@@ -116,13 +121,11 @@ public class GLRenderer implements GLEventListener
         lim_inf_z = -2f;
     }
 
-    public void reshape(GLAutoDrawable drawable, int x, int y, int width, int height)
-    {
+    public void reshape(GLAutoDrawable drawable, int x, int y, int width, int height) {
         GL gl = drawable.getGL();
         GLU glu = new GLU();
 
-        if (height <= 0)
-        { // avoid a divide by zero error!
+        if (height <= 0) { // avoid a divide by zero error!
 
             height = 1;
         }
@@ -135,41 +138,38 @@ public class GLRenderer implements GLEventListener
         gl.glLoadIdentity();
     }
 
-    public void display(GLAutoDrawable drawable)
-    {
+    public void display(GLAutoDrawable drawable) {
         update();
         render(drawable);
     }
 
-    public void update()
-    {
+    public void update() {
         jugador.update();
     }
 
-    public void render(GLAutoDrawable drawable)
-    {
+    public void render(GLAutoDrawable drawable) {
         GL gl = drawable.getGL();
         GLU glu = new GLU();
         gl.glMatrixMode(GL.GL_MODELVIEW);
         gl.glLoadIdentity();
         gl.glClear(GL.GL_COLOR_BUFFER_BIT | GL.GL_DEPTH_BUFFER_BIT);
         // Reset the current matrix to the "identity"
-        float light_ambient[] =
-        {
-            0.9f, 0.9f, 0.9f, 1.0f
-        };
-        float light_diffuse[] =
-        {
-            0.3f, 0.3f, 0.3f, 1.0f
-        };
-        float light_specular[] =
-        {
-            0.0f, 0.0f, 0.0f, 0.0f
-        };
-        float light_position[] =
-        {
-            1.0f, 1.5f, 1.0f, 0.0f
-        };
+        float light_ambient[]
+                = {
+                    0.9f, 0.9f, 0.9f, 1.0f
+                };
+        float light_diffuse[]
+                = {
+                    0.3f, 0.3f, 0.3f, 1.0f
+                };
+        float light_specular[]
+                = {
+                    0.0f, 0.0f, 0.0f, 0.0f
+                };
+        float light_position[]
+                = {
+                    1.0f, 1.5f, 1.0f, 0.0f
+                };
         gl.glLightfv(GL.GL_LIGHT0, GL.GL_AMBIENT, light_ambient, 0);
         gl.glLightfv(GL.GL_LIGHT0, GL.GL_DIFFUSE, light_diffuse, 0);
         gl.glLightfv(GL.GL_LIGHT0, GL.GL_SPECULAR, light_specular, 0);
@@ -180,8 +180,7 @@ public class GLRenderer implements GLEventListener
         gl.glMatrixMode(GL.GL_PROJECTION);
         gl.glLoadIdentity();
         glu.gluPerspective(45f, 1f, 0.2f, 20f);
-        switch (option)
-        {
+        switch (option) {
             case 1:
                 glu.gluLookAt(cx, cy, cz, 0f, 0f, 0f, 0f, 1f, 0f);
                 break;
@@ -196,8 +195,7 @@ public class GLRenderer implements GLEventListener
 
     }
 
-    public void displayChanged(GLAutoDrawable drawable, boolean modeChanged, boolean deviceChanged)
-    {
+    public void displayChanged(GLAutoDrawable drawable, boolean modeChanged, boolean deviceChanged) {
     }
 
 }
