@@ -56,6 +56,7 @@ public class Niveles extends javax.swing.JFrame
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Selecciona un nivel");
+        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 40)); // NOI18N
         jLabel1.setText("Selecciona un nivel");

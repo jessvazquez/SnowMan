@@ -11,65 +11,67 @@ import java.awt.event.KeyListener;
 import java.util.Vector;
 import javax.media.opengl.GLCanvas;
 import javax.media.opengl.glu.GLU;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author deivi
  */
-class Keyboard implements KeyListener
-{
+class Keyboard implements KeyListener {
 
     private GLCanvas canvas;
     public boolean[] keybuffer;
 
     GLU glu = new GLU();
 
-    Keyboard(GLCanvas canvas)
-    {
+    Keyboard(GLCanvas canvas) {
         this.canvas = canvas;
         keybuffer = new boolean[256];
     }
 
-    public void keyTyped(KeyEvent e)
-    {
+    public void keyTyped(KeyEvent e) {
+        if (keybuffer['z']) {
+            GLRenderer g = new GLRenderer();
+            int opc;
+            System.out.println("Z");
+            opc = JOptionPane.showConfirmDialog(canvas, "Desea salir del juego?");
+//            if (opc == 0) {
+//                CargaEscenario c = new CargaEscenario(opc, opc);
+//                Inicio i = new Inicio();
+//               
+//                i.setVisible(true);
+//            }
+        }
 
-        if (keybuffer['w'])
-        {
+        if (keybuffer['w']) {
             GLRenderer.jugador.avanzar();
 
         }
-        if (keybuffer['a'])
-        {
+        if (keybuffer['a']) {
             GLRenderer.jugador.izquierda();
         }
-        if (keybuffer['s'])
-        {
+        if (keybuffer['s']) {
             GLRenderer.jugador.retroceder();
         }
-        if (keybuffer['d'])
-        {
+        if (keybuffer['d']) {
             GLRenderer.jugador.derecha();
         }
-        if (e.getKeyChar() == 'p')
-        {
+        if (e.getKeyChar() == 'p') {
             GLRenderer.option = 1;
             System.out.println("p");
 
         }
-        if (e.getKeyChar() == 'o')
-        {
+        if (e.getKeyChar() == 'o') {
             GLRenderer.option = 2;
             System.out.println("o");
         }
     }
 
-    public void keyPressed(KeyEvent e)
-    {
+    public void keyPressed(KeyEvent e) {
         keybuffer[e.getKeyChar()] = true;
     }
 
-    public void keyReleased(KeyEvent e)
-    {
+    public void keyReleased(KeyEvent e) {
         keybuffer[e.getKeyChar()] = false;
 
     }

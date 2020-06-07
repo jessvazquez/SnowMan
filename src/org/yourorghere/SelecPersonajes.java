@@ -20,6 +20,7 @@ public class SelecPersonajes extends javax.swing.JFrame
     public SelecPersonajes()
     {
         initComponents();
+        
     }
 
     /**
@@ -29,8 +30,7 @@ public class SelecPersonajes extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         snowGirl = new javax.swing.JButton();
         cowboy = new javax.swing.JButton();
@@ -43,23 +43,21 @@ public class SelecPersonajes extends javax.swing.JFrame
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Selecciona personaje");
+        setBackground(new java.awt.Color(0, 255, 255));
+        setResizable(false);
 
         snowGirl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/snowgirl.png"))); // NOI18N
         snowGirl.setText("jButton1");
-        snowGirl.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        snowGirl.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 snowGirlActionPerformed(evt);
             }
         });
 
         cowboy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cowboy.png"))); // NOI18N
         cowboy.setText("jButton1");
-        cowboy.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        cowboy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cowboyActionPerformed(evt);
             }
         });
@@ -67,10 +65,8 @@ public class SelecPersonajes extends javax.swing.JFrame
         snowMan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/snowman.png"))); // NOI18N
         snowMan.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         snowMan.setMaximumSize(new java.awt.Dimension(432, 337));
-        snowMan.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        snowMan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 snowManActionPerformed(evt);
             }
         });
@@ -87,6 +83,8 @@ public class SelecPersonajes extends javax.swing.JFrame
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jLabel4.setText("SnowMan");
 
+        gLCanvas1.setBackground(new java.awt.Color(102, 102, 255));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -94,15 +92,11 @@ public class SelecPersonajes extends javax.swing.JFrame
             .addGroup(layout.createSequentialGroup()
                 .addGap(58, 58, 58)
                 .addComponent(snowMan, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(78, 78, 78)
-                .addComponent(snowGirl, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(snowGirl, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(89, 89, 89)
                 .addComponent(cowboy, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(214, 214, 214))
             .addGroup(layout.createSequentialGroup()
                 .addGap(343, 343, 343)
                 .addComponent(gLCanvas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -112,16 +106,20 @@ public class SelecPersonajes extends javax.swing.JFrame
                 .addComponent(jLabel4)
                 .addGap(206, 206, 206)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 227, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addGap(104, 104, 104))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(212, 212, 212))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(50, 50, 50)
+                .addComponent(jLabel1)
+                .addGap(62, 62, 62)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(snowGirl, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cowboy, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)

@@ -6,6 +6,10 @@
 package org.yourorghere;
 
 import com.sun.opengl.util.Animator;
+import java.awt.HeadlessException;
+import java.awt.Point;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import javafx.concurrent.Task;
 import sun.misc.Cleaner;
 
@@ -13,8 +17,7 @@ import sun.misc.Cleaner;
  *
  * @author deivi
  */
-public class CargaEscenario extends javax.swing.JFrame
-{
+public class CargaEscenario extends javax.swing.JFrame implements KeyListener {
 
     int personaje;
     int nivel;
@@ -28,13 +31,12 @@ public class CargaEscenario extends javax.swing.JFrame
      * @param personaje
      * @param nivel
      */
-    public CargaEscenario(int personaje, int nivel)
-    {
+    public CargaEscenario(int personaje, int nivel) {
         initComponents();
+
         this.personaje = personaje;
         this.nivel = nivel;
-        switch (personaje)
-        {
+        switch (personaje) {
             case 1:
                 SnowMan sm = new SnowMan(personaje, nivel);
                 gLCanvas2.addGLEventListener(sm);
@@ -72,6 +74,11 @@ public class CargaEscenario extends javax.swing.JFrame
         System.out.println("Nivel seleccionado: " + nivel);
     }
 
+    public void cierra() {
+        System.out.println("Cierra");
+        this.dispose();
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -79,8 +86,7 @@ public class CargaEscenario extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         gLCanvas2 = new javax.media.opengl.GLCanvas();
@@ -112,34 +118,26 @@ public class CargaEscenario extends javax.swing.JFrame
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try
-        {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels())
-            {
-                if ("Nimbus".equals(info.getName()))
-                {
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex)
-        {
+        } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(CargaEscenario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex)
-        {
+        } catch (InstantiationException ex) {
             java.util.logging.Logger.getLogger(CargaEscenario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex)
-        {
+        } catch (IllegalAccessException ex) {
             java.util.logging.Logger.getLogger(CargaEscenario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex)
-        {
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(CargaEscenario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
@@ -152,10 +150,8 @@ public class CargaEscenario extends javax.swing.JFrame
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable()
-        {
-            public void run()
-            {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
                 new CargaEscenario(0, 0).setVisible(true);
 
             }
@@ -192,4 +188,17 @@ public class CargaEscenario extends javax.swing.JFrame
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.media.opengl.GLCanvas gLCanvas2;
     // End of variables declaration//GEN-END:variables
+
+    public void keyTyped(KeyEvent e) {
+        if (e.getKeyChar()=='z') {
+            this.dispose();
+            System.out.println("Cierra");
+        }
+    }
+
+    public void keyPressed(KeyEvent e) {
+    }
+
+    public void keyReleased(KeyEvent e) {
+    }
 }

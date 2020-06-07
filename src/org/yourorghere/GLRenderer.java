@@ -41,10 +41,11 @@ public class GLRenderer implements GLEventListener {
 
     public void main(int nivel) {
 
-        GLRenderer.nivel = nivel;
+        GLRenderer.nivel = nivel; 
 
         Frame ventana = new Frame("'W' avanza, 'A' Girar a la izq. 'S' Retroceder"
-                + ", 'D' Girar a la derecha, 'O' Primera persona,'P' Vista aerea."); //Metodo clase Frame
+                + ", 'D' Girar a la derecha, 'O' Primera persona,'P' Vista aerea, 'Z' Salir al menu principal");
+        //Metodo clase Frame
 
         ventana.setSize(1000, 700);//Tamano De La ventana
         ventana.addWindowListener(new WindowAdapter() { //Manejador de ventanas de abrir y cerrar
@@ -69,10 +70,8 @@ public class GLRenderer implements GLEventListener {
 
         //Pulsacion de teclas 
         Keyboard keylistener = new Keyboard(canvas);
+       // CargaEscenario c = new CargaEscenario(0, 0);
         canvas.addKeyListener(keylistener);
-        panel = new JPanel();
-        btnMenu = new JButton("Menu");
-        panel.add(btnMenu);
 
     }
 

@@ -11,16 +11,14 @@ import javax.swing.JOptionPane;
  *
  * @author deivi
  */
-public class Inicio extends javax.swing.JFrame
-{
+public class Inicio extends javax.swing.JFrame {
 
 //    JButton b1;
 //    JLabel l1;
     /**
      * Creates new form Inicio
      */
-    public Inicio()
-    {
+    public Inicio() {
         initComponents();
 //        setTitle("SnowMan's Adventure!");
         setSize(960, 550);
@@ -35,17 +33,19 @@ public class Inicio extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
         iniciar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
+        btnCreditos = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("SnowMan's Adventure!");
+        setResizable(false);
         setSize(new java.awt.Dimension(960, 550));
 
         jPanel1.setLayout(null);
@@ -54,15 +54,13 @@ public class Inicio extends javax.swing.JFrame
         iniciar.setForeground(new java.awt.Color(102, 102, 102));
         iniciar.setText("Iniciar");
         iniciar.setToolTipText("Presiona para empezar a jugar!");
-        iniciar.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        iniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 iniciarActionPerformed(evt);
             }
         });
         jPanel1.add(iniciar);
-        iniciar.setBounds(390, 440, 190, 50);
+        iniciar.setBounds(370, 350, 190, 50);
 
         jLabel2.setFont(new java.awt.Font("Comic Sans MS", 3, 58)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(204, 0, 51));
@@ -71,15 +69,34 @@ public class Inicio extends javax.swing.JFrame
         jLabel2.setBounds(180, 20, 650, 80);
 
         jButton1.setText("Como jugar");
-        jButton1.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(837, 10, 100, 32);
+        jButton1.setBounds(820, 20, 120, 40);
+
+        btnSalir.setBackground(new java.awt.Color(204, 255, 255));
+        btnSalir.setForeground(new java.awt.Color(102, 102, 102));
+        btnSalir.setText("Salir");
+        btnSalir.setToolTipText("Presiona para empezar a jugar!");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnSalir);
+        btnSalir.setBounds(370, 410, 190, 50);
+
+        btnCreditos.setText("Creditos");
+        btnCreditos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreditosActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnCreditos);
+        btnCreditos.setBounds(30, 20, 120, 40);
 
         jLabel1.setBackground(new java.awt.Color(204, 255, 255));
         jLabel1.setForeground(new java.awt.Color(204, 255, 255));
@@ -125,49 +142,60 @@ public class Inicio extends javax.swing.JFrame
                 + ", 'D' Girar a la derec ha, 'O' Primera persona\n\t"
                 + "'O' Primera persona, 'P' Vista aerea.",
                 "Como jugar", JOptionPane.INFORMATION_MESSAGE);
-       
+
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        // TODO add your handling code here:
+        int opc;
+        opc = JOptionPane.showConfirmDialog(rootPane, "Realmente desea salir del juego?");
+        if (opc == 0) {
+            this.dispose();
+        }
+    }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void btnCreditosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreditosActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(rootPane,
+               "UAP Tiaguistenco\n"
+                       + "Profesor:\n"
+                       + "Rocio Elizabeth Pulido Alba\n"
+                       + "Integrantes:\n"
+                       + "Daniel Rojas Blancas.\n"
+                       + "David Vazquez Salas.",
+                "Creditos", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_btnCreditosActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try
-        {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels())
-            {
-                if ("Nimbus".equals(info.getName()))
-                {
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex)
-        {
+        } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex)
-        {
+        } catch (InstantiationException ex) {
             java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex)
-        {
+        } catch (IllegalAccessException ex) {
             java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex)
-        {
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable()
-        {
-            public void run()
-            {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
                 new Inicio().setVisible(true);
                 //   new BackgroundImageJFrame();
             }
@@ -175,6 +203,8 @@ public class Inicio extends javax.swing.JFrame
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCreditos;
+    private javax.swing.JButton btnSalir;
     private javax.swing.JButton iniciar;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
